@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <aside>
+      <h2>INFO</h2>
+	  <p>негодяйки</p>
+    </aside>
+    <article>
+    <section>
+				<form name="search" class="sinput" action="#" method="get">
+						<input type="searches" name="q" placeholder="Search"><button type="submit">GO</button>
+					</form>
+				<h2>Выбор читателей</h2>
+            {% for row in processed_files %}
+                <h3>
+                    {{row[0]}}. {{row[1]}}
+                </h3>
+                <p>
+                    Рейтинг: {{row[2]}}
+                </p>
+            {% endfor %}
+        </section>
+        <section>
+            {% for image in imgs %}
+                <figure><img src="/static/images/{{image}}" alt=""></figure>
+            {% endfor %}
+        </section>
+    </article>
+
+{% endblock %}
