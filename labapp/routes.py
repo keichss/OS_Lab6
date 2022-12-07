@@ -23,6 +23,16 @@ def index():
     return render_template('index.html', title='lIlIlIb', pname='HOME', navmenu=controller.navmenu,
                            imgs=imgs,  processed_files=processed_files)
 
+@app.route('/profile')
+def profile():
+    imgs = ['img1.png']
+    return render_template('profile.html', title='lIlIlIb', pname='Профиль', navmenu=controller.navmenu, imgs=imgs)
+
+@app.route('/bookmarks')
+def bookmarks():
+    imgs = ['img2.png']
+    return render_template('bookmarks.html', title='lIlIlIb', pname='Избранное', navmenu=controller.navmenu, imgs=imgs)
+
 # Обработка запроса к странице contact.html
 @app.route('/contact')
 def contact():

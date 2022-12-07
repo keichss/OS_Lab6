@@ -16,11 +16,11 @@ navmenu = [
     },
     {
         'name': 'Профиль',
-        'addr': '#'
+        'addr': '/profile'
     },
     {
         'name': 'Избранное',
-        'addr': '#'
+        'addr': '/bookmarks'
     },
     {
         'name': 'Оставить пожелание',
